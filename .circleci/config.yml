@@ -38,7 +38,7 @@ jobs:
           command: |
             mkdir -p test-output
             npm run integration-tests
-    - store_test_results: 
+      - store_test_results: 
           path: test-output
   pack:
     docker:
