@@ -21,6 +21,8 @@ jobs:
           command: |
             mkdir -p test-output
             npm run unit-tests
+      - store_test_outputs: 
+          path: test-output
   pack:
     docker:
       - image: circleci/node:lts
