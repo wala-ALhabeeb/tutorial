@@ -51,9 +51,12 @@ workflows:
   build-and-packge:
     jobs:
       - ci-build
+      - integration-tests: 
+         requires:
+            - ci-build 
       - pack:
           requires:
-            - ci-build
+            - integration-tests
           filters:
             branches:
               only:
