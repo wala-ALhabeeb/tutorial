@@ -17,6 +17,10 @@ jobs:
       - checkout 
       - install_deps
       - run:
+          name: run linting
+          command: |
+            npm run lint
+      - run:
           name: run tests
           command: |
             mkdir -p test-output
