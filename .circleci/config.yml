@@ -21,7 +21,7 @@ jobs:
           command: |
             mkdir -p test-output
             npm run unit-tests
-      - store_test_outputs: 
+      - store_test_results: 
           path: test-output
   pack:
     docker:
