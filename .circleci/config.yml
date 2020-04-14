@@ -56,7 +56,7 @@ jobs:
   sast: 
     docker: 
       - image: circleci/node:lts
-    steps:
+    steps: 
       - checkout
       - run: 
           name: setup nodejs scan
@@ -72,10 +72,10 @@ jobs:
       - store_artifacts: 
           path: sast-output.json
 
-      -run: 
-        name: parse report
-        command: |
-          exit $(cat sast-output.json | jq .total_count.sec)
+      - run: 
+          name: parse report
+          command: |
+            exit $(cat sast-output.json | jq .total_count.sec)
 
   pack:
     docker:
