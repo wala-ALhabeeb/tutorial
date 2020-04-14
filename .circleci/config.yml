@@ -11,13 +11,18 @@ jobs:
   ci-build:
     docker:
       - image: circleci/node:lts
+    environment: 
+      JEST_JUNIT_OUTPUT_DIR: test-output
     steps:
       - checkout 
       - install_deps
       - run:
           name: run tests
           command: |
+            mkdir -p test-output
             npm run unit-tests
+      - store_test_results: 
+          path: test-output
   pack:
     docker:
       - image: circleci/node:lts
