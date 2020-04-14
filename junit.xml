@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" time="3.431">
+  <testsuite name="mockingoose" errors="0" failures="0" skipped="0" timestamp="2020-04-14T13:32:01" time="1.823" tests="3">
+    <testcase classname="mockingoose Explicit Tests Should validate" name="mockingoose Explicit Tests Should validate" time="0.009">
+    </testcase>
+    <testcase classname="mockingoose Explicit Tests Should find" name="mockingoose Explicit Tests Should find" time="0.004">
+    </testcase>
+    <testcase classname="mockingoose Explicit Tests Should error when no name" name="mockingoose Explicit Tests Should error when no name" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
