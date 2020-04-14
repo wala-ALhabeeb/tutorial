@@ -25,6 +25,12 @@ jobs:
       - store_test_results: 
           path: test-output
 
+      - run: 
+          name: code coverage validation
+          command: |
+            bash <(curl -s https://codecov.io/bash)
+
+
   integration-tests: 
     docker: 
       - image: circleci/node:lts
